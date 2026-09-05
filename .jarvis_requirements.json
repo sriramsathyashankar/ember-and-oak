@@ -1,0 +1,94 @@
+{
+  "request": "Build a complete production website for a specialty coffee roastery called Ember & Oak. It needs a home page, a shop page listing at least 6 real coffees with prices and a working origin filter, a brewing-guides page with 3 full guides, an about page, and a contact page with a working contact form that validates and shows success and error states. Dark, warm, editorial design with smooth scroll animations and hover states. Fully responsive on mobile. Deploy it.",
+  "at": 1788621870.7304075,
+  "checklist": [
+    {
+      "requirement": "home page",
+      "kind": "page",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r1",
+      "status": "met",
+      "evidence": "route 'index.html' present",
+      "met": true
+    },
+    {
+      "requirement": "shop page",
+      "kind": "page",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r2",
+      "status": "met",
+      "evidence": "route 'shop' present",
+      "met": true
+    },
+    {
+      "requirement": "about page",
+      "kind": "page",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r3",
+      "status": "met",
+      "evidence": "route 'bout' present",
+      "met": true
+    },
+    {
+      "requirement": "contact page",
+      "kind": "page",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r4",
+      "status": "met",
+      "evidence": "route 'contact' present",
+      "met": true
+    },
+    {
+      "requirement": "working form submission",
+      "kind": "feature",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r5",
+      "status": "met",
+      "evidence": "100% of terms present",
+      "met": true
+    },
+    {
+      "requirement": "search / filter",
+      "kind": "feature",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r6",
+      "status": "met",
+      "evidence": "filtering/sorting logic present",
+      "met": true
+    },
+    {
+      "requirement": "responsive / mobile layout",
+      "kind": "visual",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r7",
+      "status": "met",
+      "evidence": "viewport meta + media queries present; a real grid/flex layout",
+      "met": true
+    },
+    {
+      "requirement": "deployed and live",
+      "kind": "deployment",
+      "must_have": true,
+      "check": "",
+      "source": "explicit",
+      "id": "r8",
+      "status": "pending",
+      "evidence": "not verified live yet",
+      "met": false
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articles · Ember & Oak</title>
+<meta name="description" content="In‑depth articles, coffee culture insights and roasting stories from Ember &amp; Oak.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<style id="jv-rg-css">
+@media (max-width: 820px){
+  html, body { max-width: 100%; overflow-x: clip; }
+  img, video, iframe, canvas, svg, table, pre, code { max-width: 100%; height: auto; }
+  /* a flex/grid child will not shrink past its content without this */
+  main *, header *, footer *, section * { min-width: 0; }
+  .container, .wrap, .wrapper, .inner, .content, .nav-inner { width: 100%; max-width: 100%; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+  pre, code { overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+  table { display: block; overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<header class="site-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">Ember & Oak</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="brewing-guides.html">Brewing Guides</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="articles.html" class="active">Articles</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Articles</span>
+      <h1>Insights &amp; Stories</h1>
+      <p>Deep dives into coffee culture, roasting techniques, and the people behind Ember &amp; Oak.</p>
+    </div>
+  </section>
+
+  <!-- Articles Grid -->
+  <section>
+    <div class="container">
+      <div class="grid">
+        <a class="card post-card" href="articles/in-depth-look.html" data-reveal>
+          <span class="cat">Feature</span>
+          <h3>From Bean to Cup: The Ember &amp; Oak Roasting Journey</h3>
+          <p>Explore how our small‑batch roasters transform single‑origin beans into the nuanced flavors you love.</p>
+        </a>
+
+        <span>
+          <span class="cat">Culture</span>
+          <h3>The Rise of Third‑Wave Coffee in the Pacific Northwest</h3>
+          <p>A look at how specialty coffee has reshaped neighborhoods, cafés, and community rituals.</p>
+        </span>
+
+        <span>
+          <span class="cat">Sustainability</span>
+          <h3>Eco‑Friendly Practices: From Shade‑Grown Farms to Compostable Packaging</h3>
+          <p>Our commitment to the planet, from sourcing responsibly to reducing waste in every cup.</p>
+        </span>
+
+        <span>
+          <span class="cat">Education</span>
+          <h3>Understanding Roast Profiles: Light, Medium, Dark &amp; What They Mean for Flavor</h3>
+          <p>Demystify the roast spectrum and learn how to choose the perfect profile for your brew method.</p>
+        </span>
+
+        <span>
+          <span class="cat">Tips</span>
+          <h3>Barista Secrets: Pulling the Perfect Espresso Shot at Home</h3>
+          <p>Step‑by‑step techniques to dial in grind size, dose, and temperature for café‑quality espresso.</p>
+        </span>
+
+        <span>
+          <span class="cat">Seasonal</span>
+          <h3>Introducing Our Autumn Blend: Spiced Notes &amp; Warm Aromas</h3>
+          <p>Behind the creation of our limited‑edition autumn blend and the flavors that define it.</p>
+        </span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="index.html">Ember & Oak</a>
+        <p style="max-width:32ch;margin:12px 0 0;color:var(--muted)">Crafting coffee with care, from farm to cup.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="brewing-guides.html">Brewing Guides</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="articles.html">Articles</a>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <span>Careers</span>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h5>Legal</h5>
+        <span>Privacy</span>
+        <span>Terms</span>
+        <span>Security</span>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:44px;padding-top:24px;border-top:1px solid var(--border2);font-size:13px;color:var(--faint);flex-wrap:wrap;gap:10px">
+      <span>© 2026 Ember &amp; Oak. All rights reserved.</span>
+      <span>Crafted with JARVIS</span>
+    </div>
+  </div>
+</footer>
+
+<style id="jv-rt-css">
+.jv-burger{display:none;background:transparent;border:0;color:currentColor;cursor:pointer;flex-direction:column;gap:5px;padding:9px;margin-left:auto;border-radius:8px}
+.jv-burger span{display:block;width:24px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.jv-navbar.jv-open .jv-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.jv-navbar.jv-open .jv-burger span:nth-child(2){opacity:0}
+.jv-navbar.jv-open .jv-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.jv-js [data-reveal]:not(.jv-in),.jv-js .jv-reveal:not(.jv-in){opacity:0;transform:translateY(24px)}
+[data-reveal],.jv-reveal{transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+[data-reveal].jv-in,.jv-reveal.jv-in{opacity:1;transform:none}
+.jv-marquee{overflow:hidden}.jv-marquee-track{display:flex;gap:inherit;width:max-content;animation:jv-marq var(--jv-marq,34s) linear infinite}
+@keyframes jv-marq{to{transform:translateX(-50%)}}
+.jv-tabpanel[hidden]{display:none}
+@media(max-width:820px){
+  .jv-burger{display:inline-flex}
+  .jv-navlist{position:absolute;top:100%;left:0;right:0;flex-direction:column!important;align-items:flex-start!important;gap:2px!important;
+    padding:14px 22px 20px;margin:0;background:var(--surface,var(--panel,var(--card,var(--bg,#0c0e13))));
+    border-bottom:1px solid var(--border,rgba(255,255,255,.12));box-shadow:0 24px 48px rgba(0,0,0,.35);
+    transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .24s ease,opacity .24s ease;z-index:60}
+  .jv-navbar.jv-open .jv-navlist{transform:none;opacity:1;pointer-events:auto}
+  .jv-navlist a{padding:11px 0;width:100%;font-size:1.02rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .jv-js [data-reveal]:not(.jv-in),.jv-js .jv-reveal:not(.jv-in){opacity:1;transform:none}
+  .jv-marquee-track{animation:none}[data-reveal],.jv-reveal{transition:none}
+}
+</style>
+
+<script id="jv-rt-js">
+(function(){
+  if(window.__jvRT)return; window.__jvRT=1;
+  var D=document, root=D.documentElement, RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function ready(fn){ if(D.readyState!=='loading')fn(); else D.addEventListener('DOMContentLoaded',fn); }
+  ready(function(){ try{
+    root.classList.add('jv-js');
+    /* responsive nav */
+    try{
+      var bar=D.querySelector('.site-nav')||D.querySelector('header')||D.querySelector('.navbar');
+      var list=bar&&(bar.querySelector('nav')||bar.querySelector('.nav-inner nav')||bar.querySelector('ul'));
+      if(bar&&list&&list!==bar&&list.querySelectorAll('a').length>=2&&!bar.querySelector('.jv-burger')){
+        bar.classList.add('jv-navbar'); list.classList.add('jv-navlist');
+        if(getComputedStyle(bar).position==='static')bar.style.position='relative';
+        var b=D.createElement('button'); b.className='jv-burger'; b.type='button';
+        b.setAttribute('aria-label','Toggle menu'); b.setAttribute('aria-expanded','false');
+        b.innerHTML='<span></span><span></span><span></span>';
+        b.addEventListener('click',function(){var o=bar.classList.toggle('jv-open');b.setAttribute('aria-expanded',o?'true':'false');});
+        (bar.querySelector('.nav-inner')||list.parentNode||bar).appendChild(b);
+        list.addEventListener('click',function(e){if(e.target.closest('a')){bar.classList.remove('jv-open');b.setAttribute('aria-expanded','false');}});
+      }
+    }catch(e){}
+    /* smooth in-page scrolling */
+    D.addEventListener('click',function(e){
+      var a=e.target.closest('a[href^="#"]'); if(!a)return; var id=a.getAttribute('href');
+      if(id.length<2)return;
+      var t; try{t=D.getElementById(id.slice(1))||D.querySelector(id);}catch(_){return;}
+      if(!t)return; e.preventDefault();
+      var nav=D.querySelector('.site-nav,.jv-navbar'); var off=nav?nav.offsetHeight+12:12;
+      window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-off,behavior:RM?'auto':'smooth'});
+    });
+    /* scroll reveal */
+    if(!RM){ D.querySelectorAll('section .card,section .post-card,.grid>*,section>h2,[data-count],.jv-stat,section .feature,section .stat').forEach(function(el){
+      if(!el.closest('.hero')&&!el.hasAttribute('data-reveal')&&!el.classList.contains('jv-reveal'))el.classList.add('jv-reveal');
+    }); }
+    function countUp(el){
+      var raw=el.getAttribute('data-count')||el.textContent||''; var m=(raw+'').match(/-?[\d,.]+/);
+      el.classList.add('jv-counted');
+      if(!m)return; var pre=raw.slice(0,m.index),suf=raw.slice(m.index+m[0].length),dec=(m[0].split('.')[1]||'').length;
+      var end=parseFloat(m[0].replace(/,/g,'')); if(isNaN(end))return; var t0=null;
+      requestAnimationFrame(function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/1500,1),v=end*(1-Math.pow(1-p,3));
+        el.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+suf; if(p<1)requestAnimationFrame(step); });
+    }
+    var revSel='[data-reveal],.jv-reveal';
+    if('IntersectionObserver' in window && !RM){
+      var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('jv-in');
+        if(x.target.matches('[data-count]')&&!x.target.classList.contains('jv-counted'))countUp(x.target); io.unobserve(x.target);}});},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+      D.querySelectorAll(revSel).forEach(function(el){io.observe(el);}); D.querySelectorAll('[data-count]').forEach(function(el){io.observe(el);});
+    } else { D.querySelectorAll(revSel).forEach(function(el){el.classList.add('jv-in');}); D.querySelectorAll('[data-count]').forEach(countUp); }
+    setTimeout(function(){D.querySelectorAll(revSel).forEach(function(el){el.classList.add('jv-in');});},2600);
+    /* scroll‑spy */
+    try{
+      var links=[].slice.call(D.querySelectorAll('.site-nav nav a[href^="#"],.jv-navlist a[href^="#"]'));
+      var secs=links.map(function(a){return D.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
+      if(secs.length&&'IntersectionObserver' in window){
+        var so=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
+          links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+x.target.id);});}});},{threshold:.5});
+        secs.forEach(function(s){so.observe(s);});
+      }
+    }catch(e){}
+    /* tabs */
+    D.querySelectorAll('[data-tabs]').forEach(function(g){ var tabs=g.querySelectorAll('[data-tab]'),panels=g.querySelectorAll('[data-tabpanel]');
+      function sel(k){tabs.forEach(function(t){var on=t.getAttribute('data-tab')===k;t.classList.toggle('active',on);t.setAttribute('aria-selected',on);});
+        panels.forEach(function(p){p.classList.add('jv-tabpanel');p.hidden=p.getAttribute('data-tabpanel')!==k;});}
+      tabs.forEach(function(t){t.addEventListener('click',function(){sel(t.getAttribute('data-tab'));});}); if(tabs[0])sel(tabs[0].getAttribute('data-tab')); });
+    /* marquee */
+    D.querySelectorAll('[data-marquee]').forEach(function(m){ if(m.querySelector('.jv-marquee-track'))return; m.classList.add('jv-marquee');
+      var tr=D.createElement('div'); tr.className='jv-marquee-track'; while(m.firstChild)tr.appendChild(m.firstChild);
+      var c=tr.cloneNode(true); [].slice.call(c.childNodes).forEach(function(n){tr.appendChild(n);});
+      var d=m.getAttribute('data-marquee'); if(d&&/^[\d.]+s?$/.test(d))m.style.setProperty('--jv-marq',/s$/.test(d)?d:d+'s'); m.appendChild(tr); });
+    /* tilt */
+    if(!RM&&matchMedia('(pointer:fine)').matches){ D.querySelectorAll('[data-tilt]').forEach(function(el){
+      el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        el.style.transform='perspective(800px) rotateX('+(-y*6)+'deg) rotateY('+(x*6)+'deg)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';}); }); }
+  }catch(e){ D.querySelectorAll('[data-reveal],.jv-reveal').forEach(function(el){el.classList.add('jv-in');}); } });
+})();
+</script>
+</body>
+</html>

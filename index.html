@@ -1,0 +1,438 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Home · Ember & Oak</title><meta name="description" content="Showcase Ember & Oak’s coffee lineup, educate visitors with brewing guides, and convert browsers into customers"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="styles.css"><style id="jv-rg-css">
+@media (max-width: 820px){
+  html, body { max-width: 100%; overflow-x: clip; }
+  img, video, iframe, canvas, svg, table, pre, code { max-width: 100%; height: auto; }
+  /* a flex/grid child will not shrink past its content without this */
+  main *, header *, footer *, section * { min-width: 0; }
+  .container, .wrap, .wrapper, .inner, .content, .nav-inner     { width: 100%; max-width: 100%; padding-left: max(16px, env(safe-area-inset-left));      padding-right: max(16px, env(safe-area-inset-right)); }
+  pre, code { overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+  table { display: block; overflow-x: auto; }
+}
+</style>
+</head><body><header class="site-nav"><div class="container nav-inner"><a class="brand" href="index.html">Ember & Oak</a><nav><a href="index.html" class="active">Home</a><a href="shop.html">Shop</a><a href="brewing-guides.html">Brewing Guides</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="articles.html">Articles</a></nav></div></header><main>
+  <!-- HERO SECTION -->
+  <section class="hero container" style="position:relative;overflow:hidden;height:100vh;display:flex;align-items:center;justify-content:center;color:var(--text);">
+    <canvas id="hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;"></canvas>
+    <div style="max-width:800px;text-align:center;padding:2rem;z-index:1;">
+      <p class="eyebrow" style="margin-bottom:0.5rem;font-family:var(--font-mono);color:var(--accent);letter-spacing:0.1em;">ember & oak</p>
+      <h1 style="font-family:var(--font-heading);font-size:clamp(2.5rem,6vw,4rem);margin:0 0 1rem;line-height:1.2;">Coffee forged in fire, nurtured by oak</h1>
+      <p style="font-family:var(--font-body);font-size:clamp(1rem,2vw,1.25rem);margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto;color:var(--muted);">
+        Small‑batch roasts that capture the crackle of ember and the steady strength of ancient oak. Brew better, taste deeper.
+      </p>
+      <a href="shop.html" class="btn btn-primary" style="font-family:var(--font-body);font-size:1rem;padding:0.75rem 1.5rem;">Explore the Roast</a>
+    </div>
+  </section>
+
+  <!-- ORIGIN FILTER (sticky) -->
+  <section class="container" style="position:sticky;top:0;background:var(--surface);padding:1rem 0;z-index:10;">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.5rem;">
+      <button class="btn" data-filter="all">All Origins</button>
+      <button class="btn" data-filter="ethiopia">Ethiopia</button>
+      <button class="btn" data-filter="colombia">Colombia</button>
+      <button class="btn" data-filter="guatemala">Guatemala</button>
+      <button class="btn" data-filter="brazil">Brazil</button>
+      <button class="btn" data-filter="kenya">Kenya</button>
+    </div>
+  </section>
+
+  <!-- FEATURED COFFEES -->
+  <section class="container" data-reveal>
+    <p class="eyebrow">01 / signature roasts</p>
+    <h2 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,2.5rem);margin-bottom:1rem;">Our Core Lineup</h2>
+    <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+      <article class="card" data-tilt tabindex="0" style="background:rgba(255,255,255,.04);backdrop-filter:blur(14px);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20800%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230A0A0A%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231E1E1E%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27r%27%20cx%3D%2749%25%27%20cy%3D%2728%25%27%20r%3D%2770%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270.55%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23r%29%27%2F%3E%3Cg%20fill%3D%27%238B4513%27%20opacity%3D%270.10%27%3E%3Ccircle%20cx%3D%27518%27%20cy%3D%27441%27%20r%3D%27213%27%2F%3E%3Ccircle%20cx%3D%27738%27%20cy%3D%27346%27%20r%3D%27163%27%2F%3E%3C%2Fg%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27none%27%20stroke%3D%27%238B4513%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E" alt="Ember Roast – dark, smoky, full‑bodied" loading="lazy" style="width:100%;height:auto;">
+        <div style="padding:1rem;">
+          <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">Ember Roast</h3>
+          <p style="font-family:var(--font-body);margin:0 0 0.5rem;color:var(--muted);font-size:0.9rem;">Ethiopia Yirgacheffe – smoky chocolate, black pepper finish.</p>
+          <p style="font-family:var(--font-body);font-weight:600;color:var(--accent);margin:0;">$18 / 250 g</p>
+        </div>
+      </article>
+
+      <article class="card" data-tilt tabindex="0" style="background:rgba(255,255,255,.04);backdrop-filter:blur(14px);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20800%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230A0A0A%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231E1E1E%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27r%27%20cx%3D%2739%25%27%20cy%3D%2728%25%27%20r%3D%2770%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270.55%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23r%29%27%2F%3E%3Cg%20fill%3D%27%238B4513%27%20opacity%3D%270.10%27%3E%3Ccircle%20cx%3D%27518%27%20cy%3D%27441%27%20r%3D%27213%27%2F%3E%3Ccircle%20cx%3D%27738%27%20cy%3D%27346%27%20r%3D%27163%27%2F%3E%3C%2Fg%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27none%27%20stroke%3D%27%238B4513%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E" alt="Oak Roast – balanced, nutty, bright acidity" loading="lazy" style="width:100%;height:auto;">
+        <div style="padding:1rem;">
+          <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">Oak Roast</h3>
+          <p style="font-family:var(--font-body);margin:0 0 0.5rem;color:var(--muted);font-size:0.9rem;">Colombia Supremo – caramel, toasted almond, crisp finish.</p>
+          <p style="font-family:var(--font-body);font-weight:600;color:var(--accent);margin:0;">$16 / 250 g</p>
+        </div>
+      </article>
+
+      <article class="card" data-tilt tabindex="0" style="background:rgba(255,255,255,.04);backdrop-filter:blur(14px);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20800%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230A0A0A%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231E1E1E%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27r%27%20cx%3D%2731%25%27%20cy%3D%2762%25%27%20r%3D%2770%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270.55%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23r%29%27%2F%3E%3Cg%20fill%3D%27%238B4513%27%20opacity%3D%270.10%27%3E%3Ccircle%20cx%3D%27362%27%20cy%3D%27519%27%20r%3D%27187%27%2F%3E%3Ccircle%20cx%3D%27842%27%20cy%3D%27294%27%20r%3D%27137%27%2F%3E%3C%2Fg%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27none%27%20stroke%3D%27%238B4513%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E" alt="Forest Roast – bright, floral, clean" loading="lazy" style="width:100%;height:auto;">
+        <div style="padding:1rem;">
+          <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">Forest Roast</h3>
+          <p style="font-family:var(--font-body);margin:0 0 0.5rem;color:var(--muted);font-size:0.9rem;">Guatemala Antigua – citrus, jasmine, silky body.</p>
+          <p style="font-family:var(--font-body);font-weight:600;color:var(--accent);margin:0;">$17 / 250 g</p>
+        </div>
+      </article>
+
+      <article class="card" data-tilt tabindex="0" style="background:rgba(255,255,255,.04);backdrop-filter:blur(14px);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20800%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230A0A0A%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231E1E1E%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27r%27%20cx%3D%2747%25%27%20cy%3D%2734%25%27%20r%3D%2770%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270.55%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23r%29%27%2F%3E%3Cg%20fill%3D%27%238B4513%27%20opacity%3D%270.10%27%3E%3Ccircle%20cx%3D%27614%27%20cy%3D%27393%27%20r%3D%27229%27%2F%3E%3Ccircle%20cx%3D%27674%27%20cy%3D%27378%27%20r%3D%27179%27%2F%3E%3C%2Fg%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27none%27%20stroke%3D%27%238B4513%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E" alt="River Roast – light, fruity, clean" loading="lazy" style="width:100%;height:auto;">
+        <div style="padding:1rem;">
+          <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">River Roast</h3>
+          <p style="font-family:var(--font-body);margin:0 0 0.5rem;color:var(--muted);font-size:0.9rem;">Kenya AA – blackcurrant, wine‑like acidity.</p>
+          <p style="font-family:var(--font-body);font-weight:600;color:var(--accent);margin:0;">$19 / 250 g</p>
+        </div>
+      </article>
+
+      <article class="card" data-tilt tabindex="0" style="background:rgba(255,255,255,.04);backdrop-filter:blur(14px);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20800%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230A0A0A%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231E1E1E%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27r%27%20cx%3D%2755%25%27%20cy%3D%2770%25%27%20r%3D%2770%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270.55%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23r%29%27%2F%3E%3Cg%20fill%3D%27%238B4513%27%20opacity%3D%270.10%27%3E%3Ccircle%20cx%3D%27590%27%20cy%3D%27405%27%20r%3D%27225%27%2F%3E%3Ccircle%20cx%3D%27690%27%20cy%3D%27370%27%20r%3D%27175%27%2F%3E%3C%2Fg%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27none%27%20stroke%3D%27%238B4513%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E" alt="Harvest Roast – medium, balanced, sweet" loading="lazy" style="width:100%;height:auto;">
+        <div style="padding:1rem;">
+          <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">Harvest Roast</h3>
+          <p style="font-family:var(--font-body);margin:0 0 0.5rem;color:var(--muted);font-size:0.9rem;">Brazil Santos – chocolate, nut, low acidity.</p>
+          <p style="font-family:var(--font-body);font-weight:600;color:var(--accent);margin:0;">$15 / 250 g</p>
+        </div>
+      </article>
+
+      <article class="card" data-tilt tabindex="0" style="background:rgba(255,255,255,.04);backdrop-filter:blur(14px);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease);">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20800%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230A0A0A%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231E1E1E%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27r%27%20cx%3D%2747%25%27%20cy%3D%2764%25%27%20r%3D%2770%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270.55%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23r%29%27%2F%3E%3Cg%20fill%3D%27%238B4513%27%20opacity%3D%270.10%27%3E%3Ccircle%20cx%3D%27494%27%20cy%3D%27453%27%20r%3D%27209%27%2F%3E%3Ccircle%20cx%3D%27754%27%20cy%3D%27338%27%20r%3D%27159%27%2F%3E%3C%2Fg%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27none%27%20stroke%3D%27%238B4513%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E" alt="Zen Roast – smooth, low‑acid, easy sipping" loading="lazy" style="width:100%;height:auto;">
+        <div style="padding:1rem;">
+          <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">Zen Roast</h3>
+          <p style="font-family:var(--font-body);margin:0 0 0.5rem;color:var(--muted);font-size:0.9rem;">Blend – mellow, sweet caramel, subtle fruit.</p>
+          <p style="font-family:var(--font-body);font-weight:600;color:var(--accent);margin:0;">$14 / 250 g</p>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="shop.html" class="btn btn-primary">Shop All Coffees</a>
+    </div>
+  </section>
+
+  <!-- BREWING GUIDES -->
+  <section class="container" data-reveal>
+    <p class="eyebrow">02 / brew better</p>
+    <h2 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,2.5rem);margin-bottom:1rem;">Guides for the Curious Barista</h2>
+    <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+      <article style="background:var(--surface2);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);">
+        <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">French Press Mastery</h3>
+        <p style="font-family:var(--font-body);color:var(--muted);margin:0 0 1rem;">Steep 30 g of Ember Roast in 500 ml of 93 °C water for 4 minutes. Press slowly, serve, and taste the smoky depth.</p>
+        <a href="brewing-guides.html#french-press" class="btn">Read Guide</a>
+      </article>
+      <article style="background:var(--surface2);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);">
+        <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">Pour‑Over Precision</h3>
+        <p style="font-family:var(--font-body);color:var(--muted);margin:0 0 1rem;">Use 20 g of Oak Roast, bloom 45 ml for 30 s, then pour 250 ml in a circular motion. Result: bright caramel notes with a clean finish.</p>
+        <a href="brewing-guides.html#pour-over" class="btn">Read Guide</a>
+      </article>
+      <article style="background:var(--surface2);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);">
+        <h3 style="font-family:var(--font-heading);margin:0 0 0.5rem;color:var(--text);">Aeropress Espresso‑Style</h3>
+        <p style="font-family:var(--font-body);color:var(--muted);margin:0 0 1rem;">Invert 15 g of River Roast, 60 ml water, 30 s brew, 30 s pressure. A bright, espresso‑like shot without the machine.</p>
+        <a href="brewing-guides.html#aeropress" class="btn">Read Guide</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- METRICS / IMPACT -->
+  <section class="container" data-reveal>
+    <p class="eyebrow">03 / impact</p>
+    <h2 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,2.5rem);margin-bottom:1rem;">By the Numbers</h2>
+    <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+      <div style="text-align:center;">
+        <span class="stat" data-count="12" style="font-family:var(--font-heading);font-size:2rem;color:var(--accent);display:block;">0</span>
+        <p style="font-family:var(--font-body);color:var(--muted);margin:0;">Years roasting</p>
+      </div>
+      <div style="text-align:center;">
+        <span class="stat" data-count="1500" style="font-family:var(--font-heading);font-size:2rem;color:var(--accent);display:block;">0</span>
+        <p style="font-family:var(--font-body);color:var(--muted);margin:0;">kg beans roasted per month</p>
+      </div>
+      <div style="text-align:center;">
+        <span class="stat" data-count="98" style="font-family:var(--font-heading);font-size:2rem;color:var(--accent);display:block;">0</span>
+        <p style="font-family:var(--font-body);color:var(--muted);margin:0;">% organic sourcing</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class="container cta" data-reveal style="background:var(--grad);border-radius:var(--radius);padding:3rem 2rem;text-align:center;color:var(--text);margin:4rem 0;">
+    <h2 style="font-family:var(--font-heading);font-size:clamp(2rem,5vw,2.5rem);margin-bottom:1rem;">Ready to taste the fire?</h2>
+    <p style="font-family:var(--font-body);font-size:1rem;margin-bottom:2rem;">Join our subscription and get fresh beans delivered every two weeks. No contracts, just coffee.</p>
+    <a href="shop.html" class="btn btn-primary" style="font-size:1rem;padding:0.75rem 1.5rem;">Start Subscription</a>
+  </section>
+
+  <!-- FOOTER PREVIEW (just a hint for navigation) -->
+  <section class="container" data-reveal style="padding:2rem 0;text-align:center;">
+    <nav style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="about.html" class="btn">About Us</a>
+      <a href="articles.html" class="btn">Articles</a>
+      <a href="contact.html" class="btn">Contact</a>
+    </nav>
+    <p style="font-family:var(--font-mono);color:var(--muted);margin-top:1rem;font-size:0.85rem;">© 2024 Ember &amp; Oak • All rights reserved</p>
+  </section>
+
+  <!-- INLINE STYLES FOR TILT & REVEAL -->
+  <style>
+    [data-tilt]{
+      perspective:900px;
+      cursor:pointer;
+    }
+    [data-tilt]::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.2),transparent);
+      mix-blend-mode:soft-light;
+      pointer-events:none;
+      transition:background var(--dur) var(--ease);
+    }
+    [data-tilt]:focus-visible{
+      outline:2px solid var(--accent);
+      outline-offset:2px;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 24px rgba(0,0,0,0.6);
+    }
+    [data-reveal]{
+      opacity:0;
+      transform:translateY(30px);
+      transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease);
+    }
+    [data-reveal].visible{
+      opacity:1;
+      transform:none;
+    }
+  </style>
+
+  <!-- SCRIPTS -->
+  <script type="module">
+    // ==== HERO THREE.JS SETUP ====
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.module.js';
+    const canvas = document.getElementById('hero-canvas');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.z = 5;
+    const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    // Light
+    const ambient = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambient);
+    const dirLight = new THREE.DirectionalLight(0xffaa55, 0.8);
+    dirLight.position.set(5,5,5);
+    scene.add(dirLight);
+    // Particle field (embers)
+    const particleCount = 2000;
+    const positions = new Float32Array(particleCount * 3);
+    for(let i=0;i<particleCount;i++){
+      positions[i*3] = (Math.random()-0.5)*8;
+      positions[i*3+1] = (Math.random()-0.5)*8;
+      positions[i*3+2] = (Math.random()-0.5)*8;
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions,3));
+    const material = new THREE.PointsMaterial({color:0xff6600,size:0.03,transparent:true,opacity:0.8});
+    const particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+    // Simple rotating mesh (oak silhouette)
+    const loader = new THREE.TextureLoader();
+    loader.load('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%201200%20800%27%20preserveAspectRatio%3D%27xMidYMid%20slice%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27g%27%20x1%3D%270%27%20y1%3D%270%27%20x2%3D%271%27%20y2%3D%271%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%230A0A0A%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%231E1E1E%27%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%27r%27%20cx%3D%2765%25%27%20cy%3D%2750%25%27%20r%3D%2770%25%27%3E%3Cstop%20offset%3D%270%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270.55%27%2F%3E%3Cstop%20offset%3D%27100%25%27%20stop-color%3D%27%238B4513%27%20stop-opacity%3D%270%27%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23g%29%27%2F%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23r%29%27%2F%3E%3Cg%20fill%3D%27%238B4513%27%20opacity%3D%270.10%27%3E%3Ccircle%20cx%3D%27470%27%20cy%3D%27465%27%20r%3D%27205%27%2F%3E%3Ccircle%20cx%3D%27770%27%20cy%3D%27330%27%20r%3D%27155%27%2F%3E%3C%2Fg%3E%3Crect%20x%3D%270%27%20y%3D%270%27%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27none%27%20stroke%3D%27%238B4513%27%20stroke-opacity%3D%270.18%27%20stroke-width%3D%272%27%2F%3E%3C%2Fsvg%3E', tex=>{
+      const planeGeo = new THREE.PlaneGeometry(4,4);
+      const planeMat = new THREE.MeshBasicMaterial({map:tex,transparent:true,opacity:0.85});
+      const plane = new THREE.Mesh(planeGeo,planeMat);
+      plane.position.z = -1;
+      scene.add(plane);
+    });
+    // Animation loop
+    let animId;
+    const animate = () => {
+      particles.rotation.y += 0.0005;
+      particles.rotation.x += 0.0002;
+      renderer.render(scene, camera);
+      animId = requestAnimationFrame(animate);
+    };
+    animate();
+    // Resize handler
+    const onResize = () => {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      renderer.setSize(w,h);
+      camera.aspect = w/h;
+      camera.updateProjectionMatrix();
+    };
+    window.addEventListener('resize', onResize);
+    // Cursor parallax
+    const onPointerMove = (e) => {
+      const x = (e.clientX / window.innerWidth) * 2 - 1;
+      const y = -(e.clientY / window.innerHeight) * 2 + 1;
+      camera.position.x = x * 0.5;
+      camera.position.y = y * 0.5;
+    };
+    window.addEventListener('pointermove', onPointerMove);
+    // Pause when hidden
+    document.addEventListener('visibilitychange', ()=>{
+      if(document.hidden){
+        cancelAnimationFrame(animId);
+      } else {
+        animate();
+      }
+    });
+    // ==== REVEAL ON SCROLL ====
+    const revealEls = document.querySelectorAll('[data-reveal]');
+    const revealObserver = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },{threshold:0.1});
+    revealEls.forEach(el=>revealObserver.observe(el));
+    // ==== COUNTER ANIMATION ====
+    const countEls = document.querySelectorAll('.stat');
+    const countObserver = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const el = entry.target;
+          const target = +el.dataset.count;
+          let start = 0;
+          const duration = 1500;
+          const step = timestamp => {
+            const progress = Math.min(timestamp / duration, 1);
+            el.textContent = Math.floor(progress * target);
+            if(progress < 1){
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = target;
+            }
+          };
+          requestAnimationFrame(step);
+          countObserver.unobserve(el);
+        }
+      });
+    },{threshold:0.6});
+    countEls.forEach(el=>countObserver.observe(el));
+    // ==== TILT EFFECT ====
+    const tiltEls = document.querySelectorAll('[data-tilt]');
+    tiltEls.forEach(card=>{
+      let rafId;
+      const onMove = e=>{
+        const rect = card.getBoundingClientRect();
+        const px = (e.clientX - rect.left) / rect.width;
+        const py = (e.clientY - rect.top) / rect.height;
+        const rotX = (0.5 - py) * 16;
+        const rotY = (px - 0.5) * 16;
+        card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+        card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+        cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(()=>{});
+      };
+      const onLeave = ()=>{
+        card.style.transform = '';
+        card.style.removeProperty('--mx');
+        card.style.removeProperty('--my');
+      };
+      card.addEventListener('pointermove', onMove);
+      card.addEventListener('pointerleave', onLeave);
+    });
+    // ==== ORIGIN FILTER (simple client‑side) ====
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const coffeeCards = document.querySelectorAll('.card');
+    filterButtons.forEach(btn=>{
+      btn.addEventListener('click',()=> {
+        const tag = btn.dataset.filter;
+        coffeeCards.forEach(card=>{
+          const hasTag = card.textContent.toLowerCase().includes(tag);
+          card.parentElement.style.display = (tag==='all' || hasTag) ? '' : 'none';
+        });
+        filterButtons.forEach(b=>b.classList.toggle('active', b===btn));
+      });
+    });
+  </script>
+</main><footer class="site-footer"><div class="container"><div class="fgrid"><div><a class="brand" href="index.html">Ember & Oak</a><p style="max-width:32ch;margin:12px 0 0;color:var(--muted)">E‑Commerce — built to a standard.</p></div><div><h5>Explore</h5><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="brewing-guides.html">Brewing Guides</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div><h5>Company</h5><a href="about.html">About</a><span class="">Careers</span><a href="contact.html">Contact</a></div><div><h5>Legal</h5><span class="">Privacy</span><span class="">Terms</span><span class="">Security</span></div></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:44px;padding-top:24px;border-top:1px solid var(--border2);font-size:13px;color:var(--faint);flex-wrap:wrap;gap:10px"><span>© 2026 E‑Commerce. All rights reserved.</span><span>Crafted with JARVIS</span></div></div></footer><style id="jv-rt-css">
+.jv-burger{display:none;background:transparent;border:0;color:currentColor;cursor:pointer;flex-direction:column;gap:5px;padding:9px;margin-left:auto;border-radius:8px}
+.jv-burger span{display:block;width:24px;height:2px;background:currentColor;border-radius:2px;transition:transform .25s ease,opacity .2s ease}
+.jv-navbar.jv-open .jv-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.jv-navbar.jv-open .jv-burger span:nth-child(2){opacity:0}
+.jv-navbar.jv-open .jv-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.jv-js [data-reveal]:not(.jv-in),.jv-js .jv-reveal:not(.jv-in){opacity:0;transform:translateY(24px)}
+[data-reveal],.jv-reveal{transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+[data-reveal].jv-in,.jv-reveal.jv-in{opacity:1;transform:none}
+.jv-marquee{overflow:hidden}.jv-marquee-track{display:flex;gap:inherit;width:max-content;animation:jv-marq var(--jv-marq,34s) linear infinite}
+@keyframes jv-marq{to{transform:translateX(-50%)}}
+.jv-tabpanel[hidden]{display:none}
+@media(max-width:820px){
+  .jv-burger{display:inline-flex}
+  .jv-navlist{position:absolute;top:100%;left:0;right:0;flex-direction:column!important;align-items:flex-start!important;gap:2px!important;
+    padding:14px 22px 20px;margin:0;background:var(--surface,var(--panel,var(--card,var(--bg,#0c0e13))));
+    border-bottom:1px solid var(--border,rgba(255,255,255,.12));box-shadow:0 24px 48px rgba(0,0,0,.35);
+    transform:translateY(-12px);opacity:0;pointer-events:none;transition:transform .24s ease,opacity .24s ease;z-index:60}
+  .jv-navbar.jv-open .jv-navlist{transform:none;opacity:1;pointer-events:auto}
+  .jv-navlist a{padding:11px 0;width:100%;font-size:1.02rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .jv-js [data-reveal]:not(.jv-in),.jv-js .jv-reveal:not(.jv-in){opacity:1;transform:none}
+  .jv-marquee-track{animation:none}[data-reveal],.jv-reveal{transition:none}
+}
+</style>
+<script id="jv-rt-js">
+(function(){
+  if(window.__jvRT)return; window.__jvRT=1;
+  var D=document, root=D.documentElement, RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function ready(fn){ if(D.readyState!=='loading')fn(); else D.addEventListener('DOMContentLoaded',fn); }
+  ready(function(){ try{
+    root.classList.add('jv-js');
+    /* responsive nav — enhances the deterministic .site-nav and generic header navs */
+    try{
+      var bar=D.querySelector('.site-nav')||D.querySelector('header')||D.querySelector('.navbar');
+      var list=bar&&(bar.querySelector('nav')||bar.querySelector('.nav-inner nav')||bar.querySelector('ul'));
+      if(bar&&list&&list!==bar&&list.querySelectorAll('a').length>=2&&!bar.querySelector('.jv-burger')){
+        bar.classList.add('jv-navbar'); list.classList.add('jv-navlist');
+        if(getComputedStyle(bar).position==='static')bar.style.position='relative';
+        var b=D.createElement('button'); b.className='jv-burger'; b.type='button';
+        b.setAttribute('aria-label','Toggle menu'); b.setAttribute('aria-expanded','false');
+        b.innerHTML='<span></span><span></span><span></span>';
+        b.addEventListener('click',function(){var o=bar.classList.toggle('jv-open');b.setAttribute('aria-expanded',o?'true':'false');});
+        (bar.querySelector('.nav-inner')||list.parentNode||bar).appendChild(b);
+        list.addEventListener('click',function(e){if(e.target.closest('a')){bar.classList.remove('jv-open');b.setAttribute('aria-expanded','false');}});
+      }
+    }catch(e){}
+    /* smooth in-page scrolling with sticky-nav offset */
+    D.addEventListener('click',function(e){
+      var a=e.target.closest('a[href^="#"]'); if(!a)return; var id=a.getAttribute('href'); if(id.length<2)return;
+      var t; try{t=D.getElementById(id.slice(1))||D.querySelector(id);}catch(_){return;} if(!t)return; e.preventDefault();
+      var nav=D.querySelector('.site-nav,.jv-navbar'); var off=nav?nav.offsetHeight+12:12;
+      window.scrollTo({top:t.getBoundingClientRect().top+window.pageYOffset-off,behavior:RM?'auto':'smooth'});
+    });
+    /* scroll reveal — auto-applied below the hero so motion is guaranteed */
+    if(!RM){ D.querySelectorAll('section .card,section .post-card,.grid>*,section>h2,[data-count],.jv-stat,section .feature,section .stat').forEach(function(el){
+      if(!el.closest('.hero')&&!el.hasAttribute('data-reveal')&&!el.classList.contains('jv-reveal'))el.classList.add('jv-reveal'); }); }
+    function countUp(el){
+      var raw=el.getAttribute('data-count')||el.textContent||''; var m=(raw+'').match(/-?[\d,.]+/); el.classList.add('jv-counted');
+      if(!m)return; var pre=raw.slice(0,m.index),suf=raw.slice(m.index+m[0].length),dec=(m[0].split('.')[1]||'').length;
+      var end=parseFloat(m[0].replace(/,/g,'')); if(isNaN(end))return; var t0=null;
+      requestAnimationFrame(function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/1500,1),v=end*(1-Math.pow(1-p,3));
+        el.textContent=pre+(dec?v.toFixed(dec):Math.round(v).toLocaleString())+suf; if(p<1)requestAnimationFrame(step); });
+    }
+    var revSel='[data-reveal],.jv-reveal';
+    if('IntersectionObserver' in window && !RM){
+      var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('jv-in');
+        if(x.target.matches('[data-count]')&&!x.target.classList.contains('jv-counted'))countUp(x.target); io.unobserve(x.target);}});},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+      D.querySelectorAll(revSel).forEach(function(el){io.observe(el);}); D.querySelectorAll('[data-count]').forEach(function(el){io.observe(el);});
+    } else { D.querySelectorAll(revSel).forEach(function(el){el.classList.add('jv-in');}); D.querySelectorAll('[data-count]').forEach(countUp); }
+    setTimeout(function(){D.querySelectorAll(revSel).forEach(function(el){el.classList.add('jv-in');});},2600);
+    /* scroll-spy on in-page nav links */
+    try{ var links=[].slice.call(D.querySelectorAll('.site-nav nav a[href^="#"],.jv-navlist a[href^="#"]'));
+      var secs=links.map(function(a){return D.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
+      if(secs.length&&'IntersectionObserver' in window){ var so=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){
+        links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+x.target.id);});}});},{threshold:.5}); secs.forEach(function(s){so.observe(s);}); }
+    }catch(e){}
+    /* tabs: [data-tabs] > [data-tab=k] buttons + [data-tabpanel=k] panels */
+    D.querySelectorAll('[data-tabs]').forEach(function(g){ var tabs=g.querySelectorAll('[data-tab]'),panels=g.querySelectorAll('[data-tabpanel]');
+      function sel(k){tabs.forEach(function(t){var on=t.getAttribute('data-tab')===k;t.classList.toggle('active',on);t.setAttribute('aria-selected',on);});
+        panels.forEach(function(p){p.classList.add('jv-tabpanel');p.hidden=p.getAttribute('data-tabpanel')!==k;});}
+      tabs.forEach(function(t){t.addEventListener('click',function(){sel(t.getAttribute('data-tab'));});}); if(tabs[0])sel(tabs[0].getAttribute('data-tab')); });
+    /* marquee: [data-marquee] loops its row seamlessly (optional --jv-marq duration) */
+    D.querySelectorAll('[data-marquee]').forEach(function(m){ if(m.querySelector('.jv-marquee-track'))return; m.classList.add('jv-marquee');
+      var tr=D.createElement('div'); tr.className='jv-marquee-track'; while(m.firstChild)tr.appendChild(m.firstChild);
+      var c=tr.cloneNode(true); [].slice.call(c.childNodes).forEach(function(n){tr.appendChild(n);});
+      var d=m.getAttribute('data-marquee'); if(d&&/^[\d.]+s?$/.test(d))m.style.setProperty('--jv-marq',/s$/.test(d)?d:d+'s'); m.appendChild(tr); });
+    /* subtle tilt micro-interaction on [data-tilt] (fine pointers only) */
+    if(!RM&&matchMedia('(pointer:fine)').matches){ D.querySelectorAll('[data-tilt]').forEach(function(el){
+      el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        el.style.transform='perspective(800px) rotateX('+(-y*6)+'deg) rotateY('+(x*6)+'deg)';});
+      el.addEventListener('mouseleave',function(){el.style.transform='';}); }); }
+  }catch(e){ D.querySelectorAll('[data-reveal],.jv-reveal').forEach(function(el){el.classList.add('jv-in');}); } });
+})();
+</script>
+</body></html>
